@@ -39,7 +39,7 @@ function rukavichkaExportToExcel() {
         console.log("salePriceElement:", salePriceElement); 
         console.log("discountPercentageElement:", discountPercentageElement);
 
-        if (!specialPriceElement || !salePriceElement || !discountPercentageElement) {
+        if (!specialPriceElement && !salePriceElement && !discountPercentageElement) {
             // Если элементов .new-special-price, .fm-module-price-old, .fm-module-sticker-discount нет внутри .fm-module-item,
             // значит, товар не имеет скидки
             const price = priceElement ? priceElement.innerText.trim() || '' : '';  
