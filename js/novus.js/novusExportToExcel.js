@@ -87,6 +87,7 @@ function novusExportToExcel(container) {
     const wb = XLSX.utils.book_new();
     const ws = XLSX.utils.aoa_to_sheet(data);
     XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    // console.log(data);
     XLSX.writeFile(wb, "data.xlsx");
 }
 export { novusExportToExcel };
