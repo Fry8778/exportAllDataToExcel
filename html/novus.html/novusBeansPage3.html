@@ -9,20 +9,20 @@
 </head>
 
 <body>
-    <p><a href="novusGround.html">Go back</a></p>
+    <p><a href="novusBeans.html">Go back</a></p>
 
     <button id="exportButton">Выгрузить в Excel</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script type="module">
-        import { novusloadDataGroundPage3 } from '../js/novus.js/novusloadDataGroundPage3.js';
-        import { novusExportToExcel } from '../js/novus.js/novusExportToExcel.js';
+        import { novusloadDataBeansPage3 } from '../../js/novus.js/novusloadDataBeansPage3.js';
+        import { novusExportToExcel } from '../../js/novus.js/novusExportToExcel.js';
 
         // Добавляем обработчик события на клик по кнопке
         document.getElementById('exportButton').addEventListener('click', async () => {
-            // Вызываем функцию novusloadDataGroundPage3 и дожидаемся ее завершения
-            await novusloadDataGroundPage3();
-            // Вызываем функцию novusExportToExcel после завершения novusloadDataGroundPage3
+            // Вызываем функцию novusloadDataBeansPage3 и дожидаемся ее завершения
+            await novusloadDataBeansPage3();
+            // Вызываем функцию novusExportToExcel после завершения novusloadDataBeansPage3
             novusExportToExcel();
         });
     </script>

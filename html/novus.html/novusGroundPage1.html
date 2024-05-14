@@ -9,21 +9,21 @@
 </head>
 
 <body>
-    <p><a href="tavriavGroundAndBeans.html">Go back</a></p>
+    <p><a href="novusGround.html">Go back</a></p>
 
     <button id="exportButton">Выгрузить в Excel</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script type="module">
-        import { tavriavLoadDataBeansPage1 } from '/js/tavriav.js/tavriavLoadDataBeansPage1.js';
-        import { tavriavExportToExcel} from '/js/tavriav.js/tavriavExportToExcel.js';
+        import { novusloadDataGroundPage1 } from '../../js/novus.js/novusloadDataGroundPage1.js';      
+        import { novusExportToExcel } from '../../js/novus.js/novusExportToExcel.js';
 
         // Добавляем обработчик события на клик по кнопке
         document.getElementById('exportButton').addEventListener('click', async () => {
-            // Вызываем функцию tavriavLoadDataBeansPage1 и дожидаемся ее завершения
-            await tavriavLoadDataBeansPage1();
-            // Вызываем функцию tavriavExportToExcel после завершения tavriavLoadDataBeansPage1
-            tavriavExportToExcel();
+            // Вызываем функцию novusloadDataGroundPage1 и дожидаемся ее завершения
+            await novusloadDataGroundPage1();
+            // Вызываем функцию novusExportToExcel после завершения novusloadDataGroundPage1
+            novusExportToExcel();
         });
     </script>
 </body>

@@ -9,21 +9,21 @@
 </head>
 
 <body>
-    <p><a href="silpoGroundAndBeans.html">Go back</a></p>
+    <p><a href="./allCoffe.html">Go back</a></p>
 
     <button id="exportButton">Выгрузить в Excel</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script type="module">
-        import { silpoLoadDataBeansPage1 } from '/js/silpo.js/silpoLoadDataBeansPage1.js';
-        import { silpoExportToExcel} from '/js/silpo.js/silpoExportToExcel.js';
+        import { varusAllCoffePage1 } from '../../js/varus.js/varusAllCoffePage1.js';
+        import { varusExportToExcel} from '../../js/varus.js/varusExportToExcel.js';
 
         // Добавляем обработчик события на клик по кнопке
         document.getElementById('exportButton').addEventListener('click', async () => {
-            // Вызываем функцию silpoLoadDataBeansPage1 и дожидаемся ее завершения
-            await silpoLoadDataBeansPage1();
-            // Вызываем функцию silpoExportToExcel после завершения silpoLoadDataBeansPage1
-            silpoExportToExcel();
+            // Вызываем функцию varusAllCoffePage1 и дожидаемся ее завершения
+            await varusAllCoffePage1();
+            // Вызываем функцию varusExportToExcel после завершения varusAllCoffePage1
+            varusExportToExcel();
         });
     </script>
 </body>

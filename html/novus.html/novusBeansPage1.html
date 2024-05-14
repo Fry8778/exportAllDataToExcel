@@ -9,21 +9,21 @@
 </head>
 
 <body>
-    <p><a href="rukavichkaGroundAndBeans.html">Go back</a></p>
+    <p><a href="novusBeans.html">Go back</a></p>
 
     <button id="exportButton">Выгрузить в Excel</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script type="module">
-        import { rukavichkaLoadDataBeansPage1 } from '/js/rukavichka.js/rukavichkaLoadDataBeansPage1.js';
-        import { rukavichkaExportToExcel} from '/js/rukavichka.js/rukavichkaExportToExcel.js';
+        import { novusloadDataBeansPage1 } from '../../js/novus.js/novusloadDataBeansPage1.js';
+        import { novusExportToExcel } from '../../js/novus.js/novusExportToExcel.js';
 
         // Добавляем обработчик события на клик по кнопке
         document.getElementById('exportButton').addEventListener('click', async () => {
-            // Вызываем функцию rukavichkaLoadDataBeansPage1 и дожидаемся ее завершения
-            await rukavichkaLoadDataBeansPage1();
-            // Вызываем функцию rukavichkaExportToExcel после завершения rukavichkaLoadDataBeansPage1
-            rukavichkaExportToExcel();
+            // Вызываем функцию novusloadDataBeansPage1 и дожидаемся ее завершения
+            await novusloadDataBeansPage1();
+            // Вызываем функцию novusExportToExcel после завершения novusloadDataBeansPage1
+            novusExportToExcel();
         });
     </script>
 </body>

@@ -5,25 +5,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page 2</title>
+    <title>Page 1</title>
 </head>
 
 <body>
-    <p><a href="novusBeans.html">Go back</a></p>
+    <p><a href="./silpoGroundAndBeans.html">Go back</a></p>
 
     <button id="exportButton">Выгрузить в Excel</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
     <script type="module">
-        import { novusloadDataBeansPage2 } from '../js/novus.js/novusloadDataBeansPage2.js';
-        import { novusExportToExcel } from '../js/novus.js/novusExportToExcel.js';
+        import { silpoLoadDataBeansPage1 } from '../../js/silpo.js/silpoLoadDataBeansPage1.js';
+        import { silpoExportToExcel} from '../../js/silpo.js/silpoExportToExcel.js';
 
         // Добавляем обработчик события на клик по кнопке
         document.getElementById('exportButton').addEventListener('click', async () => {
-            // Вызываем функцию novusloadDataBeansPage2 и дожидаемся ее завершения
-            await novusloadDataBeansPage2();
-            // Вызываем функцию novusExportToExcel после завершения novusloadDataBeansPage2
-            novusExportToExcel();
+            // Вызываем функцию silpoLoadDataBeansPage1 и дожидаемся ее завершения
+            await silpoLoadDataBeansPage1();
+            // Вызываем функцию silpoExportToExcel после завершения silpoLoadDataBeansPage1
+            silpoExportToExcel();
         });
     </script>
 </body>
